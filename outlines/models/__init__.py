@@ -7,3 +7,4 @@ codebase.
 """
 from .openai import OpenAIAPI, openai
 from .transformers import Transformers, transformers
+from .auto_awq import auto_awq
