@@ -17,7 +17,7 @@ def auto_awq(
             "The `auto_awq` and `transformers` library needs to be installed in order to use `AutoAWQ` models."
         )
 
-    model_kwargs["fuse_layer"] = fuse_layer
+    model_kwargs["fuse_layers"] = fuse_layers
 
     if device is not None:
         model_kwargs["device_map"] = device
