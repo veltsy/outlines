@@ -23,7 +23,7 @@ def auto_awq(
         model_kwargs["device_map"] = device
 
 
-    model = AutoAWQForCausalLM.from_quantized(quant_path, **model_kwargs)
-    tokenizer = AutoTokenizer.from_pretrained(quant_path, trust_remote_code=True)
+    model = AutoAWQForCausalLM.from_quantized(model_name, **model_kwargs)
+    tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
 
     return Transformers(model, tokenizer)
