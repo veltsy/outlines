@@ -1,4 +1,5 @@
 from .transformers import Transformers
+from typing import Optional
 
 def auto_awq(
         model_name: str,
