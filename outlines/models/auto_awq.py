@@ -10,7 +10,7 @@ def auto_awq(
     ):
 
     try:
-        from auto_awq import AutoAWQForCausalLM
+        from awq import AutoAWQForCausalLM
         from transformers import AutoTokenizer
     except ImportError:
         raise ImportError(
