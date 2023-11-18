@@ -24,6 +24,8 @@ def auto_awq(
 
 
     model = AutoAWQForCausalLM.from_quantized(model_name, **model_kwargs)
+    if device is not None:
+        model.device = device
     tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
 
     return Transformers(model, tokenizer)
