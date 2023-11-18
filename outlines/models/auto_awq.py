@@ -19,10 +19,6 @@ def auto_awq(
 
     model_kwargs["fuse_layers"] = fuse_layers
 
-    if device is not None:
-        model_kwargs["device_map"] = device
-
-
     model = AutoAWQForCausalLM.from_quantized(model_name, **model_kwargs)
     if device is not None:
         model.device = device
